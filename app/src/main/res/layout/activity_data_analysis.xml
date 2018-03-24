@@ -3,15 +3,20 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/shape"
     tools:context=".DataAnalysisActivity">
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="170dp"
-        android:layout_marginTop="60dp"
-        android:text="Select an input:" />
+        android:layout_below="@+id/back"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="18dp"
+        android:fontFamily="serif-monospace"
+        android:text="Select an input:"
+        android:textSize="24sp"
+        android:textStyle="bold" />
 
 
     <Button
@@ -19,15 +24,22 @@
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_weight="1"
-        android:text="back" />
+        android:background="@drawable/mybutton"
+        android:fontFamily="serif-monospace"
+        android:text="back"
+        android:textColor="@android:color/white" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="400dp"
-        android:layout_marginLeft="130dp"
-        android:text="Do Fancy Stuff" />
+        android:layout_width="100dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/mybutton"
+        android:fontFamily="serif-monospace"
+        android:text="Do Fancy Stuff"
+        android:textColor="@android:color/white" />
 
     <Spinner
         android:id="@+id/dynamic_spinner"
@@ -41,47 +53,69 @@
         android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="180dp"
-        android:layout_marginTop="110dp"
-        android:text="TextView" />
+        android:layout_alignEnd="@+id/dynamic_spinner"
+        android:layout_below="@+id/dynamic_spinner"
+        android:fontFamily="serif-monospace"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="110dp"
-        android:layout_marginLeft="95dp"
-        android:text="Input Value:" />
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_alignEnd="@+id/textView6"
+        android:fontFamily="serif-monospace"
+        android:text="Input Value:"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="170dp"
-        android:layout_marginTop="190dp"
-        android:text="Select an output:" />
+        android:layout_alignBottom="@+id/dynamic_spinner2"
+        android:layout_alignStart="@+id/textView3"
+        android:layout_marginBottom="41dp"
+        android:fontFamily="serif-monospace"
+        android:text="Select an output:"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
     <Spinner
         android:id="@+id/dynamic_spinner2"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/back"
-        android:layout_marginTop="180dp"
-        android:layout_toEndOf="@+id/back" />
+        android:layout_alignEnd="@+id/textView1"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="138dp" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="180dp"
-        android:layout_marginTop="260dp"
-        android:text="TextView" />
+        android:layout_alignEnd="@+id/dynamic_spinner2"
+        android:layout_below="@+id/dynamic_spinner2"
+        android:layout_marginTop="27dp"
+        android:fontFamily="serif-monospace"
+        android:text="TextView"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="260dp"
-        android:layout_marginLeft="90dp"
-        android:text="Output Value:" />
+        android:layout_alignBaseline="@+id/textView2"
+        android:layout_alignBottom="@+id/textView2"
+        android:layout_alignEnd="@+id/button2"
+        android:layout_marginEnd="41dp"
+        android:fontFamily="serif-monospace"
+        android:text="Output Value:"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>

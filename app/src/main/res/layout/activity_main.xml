@@ -2,21 +2,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/shape"
     tools:context="hackisu.hackisuspring18.MainActivity">
 
     <TextView
+        android:id="@id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_below="@+id/readFile"
-        android:layout_marginStart="17dp"
-        android:layout_marginTop="22dp"
-        android:id="@id/title"
-        android:text="HackISU Title" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="34dp"
+        android:fontFamily="serif-monospace"
+        android:text="HACKISU"
+        android:textColor="@android:color/white"
+        android:textSize="36sp" />
 
     <Button
         android:id="@+id/readFile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Read CSV File" />
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="98dp"
+        android:background="@drawable/mybutton"
+        android:fontFamily="serif-monospace"
+        android:text="Read CSV File"
+        android:textColor="@android:color/background_light" />
 </RelativeLayout>
