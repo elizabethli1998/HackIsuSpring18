@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".ReadCSVActivity" />
+        <activity android:name=".DataAnalysisActivity" />
     </application>
 
 </manifest>

@@ -9,6 +9,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Scanner;
 
 public class CSVFile {
     InputStream inputStream;
@@ -17,28 +18,37 @@ public class CSVFile {
         this.inputStream = inputStream;
     }
 
-    public List<String[]> read(){
-        List<String[]> resultList = new ArrayList<String[]>();
+    public ArrayList<String> read(){
+//        List<String[]> resultList = new ArrayList<String[]>();
         BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
         try {
-            String csvLine;
-            while ((csvLine = reader.readLine()) != null) {
+            String csvLine = reader.readLine();
+            Scanner scan = new Scanner(csvLine);
+            scan.useDelimiter(",");
+            ArrayList<String> ALS = new ArrayList<String>();
+            while(scan.hasNext()) {
+                ALS.add(scan.next());
+            }
+
+            return ALS;
+
+            /*while ((csvLine = reader.readLine()) != null) {
                 String[] row = csvLine.split(",");
                 resultList.add(row);
-            }
+            }*/
         }
         catch (IOException ex) {
             throw new RuntimeException("Error in reading CSV file: "+ex);
         }
-        finally {
-            try {
-                inputStream.close();
-            }
-            catch (IOException e) {
-                throw new RuntimeException("Error while closing input stream: "+e);
-            }
-        }
-        return resultList;
+//        finally {
+//            try {
+//                inputStream.close();
+//            }
+//            catch (IOException e) {
+//                throw new RuntimeException("Error while closing input stream: "+e);
+//            }
+//        }
+//        return resultList;
 
     }
 }
