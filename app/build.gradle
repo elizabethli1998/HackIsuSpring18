@@ -24,7 +24,8 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
     implementation files('libs/libtensorflow-1.6.0.jar')
-    compile 'com.loopj.android:android-async-http:1.4.9'
+    implementation files('libs/volley.jar')
+
 }
 
 repositories {

@@ -6,12 +6,17 @@
     tools:context="hackisu.hackisuspring18.ReadCSVActivity">
 
     <TextView
+        android:id="@id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_alignBaseline="@+id/home"
+        android:layout_alignBottom="@+id/home"
         android:layout_centerHorizontal="true"
-        android:id="@id/title"
-        android:text="HackISU Title" />
+        android:fontFamily="serif-monospace"
+        android:text="HackISU"
+        android:textColor="@android:color/black"
+        android:textSize="18sp"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/home"
