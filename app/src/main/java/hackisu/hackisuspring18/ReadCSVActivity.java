@@ -36,7 +36,7 @@ public class ReadCSVActivity extends Activity
         listView = (ListView) findViewById(R.id.listView);
         listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
-        InputStream inputStream = getResources().openRawResource(R.raw.hotel);
+        InputStream inputStream = getResources().openRawResource(R.raw.pass_12_13);
         CSVFile csvFile = new CSVFile(inputStream);
         ArrayList<String> scoreList = csvFile.read();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.checkbox_layout, R.id.checkbox1,scoreList);

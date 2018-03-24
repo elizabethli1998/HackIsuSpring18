@@ -19,23 +19,22 @@ public class CSVFile {
     }
 
     public ArrayList<String> read(){
-//        List<String[]> resultList = new ArrayList<String[]>();
         BufferedReader reader = new BufferedReader(new InputStreamReader(inputStream));
         try {
             String csvLine = reader.readLine();
             Scanner scan = new Scanner(csvLine);
             scan.useDelimiter(",");
             ArrayList<String> ALS = new ArrayList<String>();
-            while(scan.hasNext()) {
+
+
+           while(scan.hasNext())
+           {
                 ALS.add(scan.next());
+
             }
 
             return ALS;
 
-            /*while ((csvLine = reader.readLine()) != null) {
-                String[] row = csvLine.split(",");
-                resultList.add(row);
-            }*/
         }
         catch (IOException ex) {
             throw new RuntimeException("Error in reading CSV file: "+ex);
