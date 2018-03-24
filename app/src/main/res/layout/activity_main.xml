@@ -23,7 +23,7 @@
         android:layout_height="40dp"
         android:layout_alignStart="@+id/checkBox2"
         android:layout_below="@+id/title"
-        android:layout_marginTop="55dp"
+        android:layout_marginTop="121dp"
         android:background="@drawable/mybutton"
         android:text="AP COM S" />
 
@@ -31,10 +31,10 @@
         android:id="@+id/checkBox2"
         android:layout_width="100dp"
         android:layout_height="40dp"
-        android:layout_alignParentStart="true"
         android:layout_below="@+id/checkBox1"
-        android:layout_marginStart="48dp"
-        android:layout_marginTop="43dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginTop="60dp"
+        android:layout_toStartOf="@+id/description3"
         android:background="@drawable/mybutton"
         android:text="Hotel Rates" />
 
@@ -43,10 +43,69 @@
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_alignStart="@+id/checkBox2"
-        android:layout_below="@+id/checkBox2"
-        android:layout_marginTop="46dp"
+        android:layout_below="@+id/description3"
+        android:layout_marginTop="29dp"
         android:background="@drawable/mybutton"
         android:text="Lottery" />
+
+    <TextView
+        android:id="@+id/description"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/checkBox1"
+        android:layout_below="@+id/title"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:fontFamily="serif-monospace"
+        android:inputType="textMultiLine"
+        android:text="Welcome! Please choose a dataset to get started. Have fun with your neural networks! "
+        android:textColor="@android:color/black"
+        android:background="@drawable/description"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/description2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignStart="@+id/description3"
+        android:layout_alignTop="@+id/checkBox1"
+        android:ems="10"
+        android:fontFamily="serif-monospace"
+        android:inputType="textMultiLine"
+        android:text="Historical data for numbers of COM S AP A Exams taken for every state for 2012 and 2013! "
+        android:textColor="@android:color/black"
+        android:background="@drawable/mytext"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/description3"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/checkBox2"
+        android:layout_marginEnd="13dp"
+        android:background="@drawable/mytext"
+        android:ems="10"
+        android:fontFamily="serif-monospace"
+        android:inputType="textMultiLine"
+        android:text="Compare Hotel reviews by state!"
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/description4"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/description3"
+        android:layout_alignTop="@+id/checkBox3"
+        android:background="@drawable/mytext"
+        android:ems="10"
+        android:fontFamily="serif-monospace"
+        android:inputType="textMultiLine"
+        android:text="Take a look at the winning lotto numbers in New York since 2001! "
+        android:textColor="@android:color/black"
+        android:textStyle="bold" />
 
 
 </RelativeLayout>
