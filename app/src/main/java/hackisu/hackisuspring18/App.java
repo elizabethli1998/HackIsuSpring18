@@ -7,6 +7,7 @@ import org.tensorflow.Session;
 import java.io.FileNotFoundException;
 
 import java.io.FileReader;
+import java.io.UnsupportedEncodingException;
 
 /**
  * Created by Smith on 24-Mar-18.
@@ -22,12 +23,12 @@ public class App {
         } catch (FileNotFoundException e) {
             System.out.println(
                     "Unable to open file '" +
-                            fileName + "'");
+                            inputname + "'");
         }
         try (Graph g = new Graph()) {
 
 
-            try (Tensor t = Tensor.create(value.getBytes("UTF-8"))) {
+            try (Tensor t = Tensor.create(args[0].getBytes("UTF-8"))) {
                 //g.opBuilder("Const", "MyConst").set
                 g.opBuilder("Const", "MyConst").setAttr("dtype", t.dataType()).setAttr("value", t).build();
 
@@ -35,6 +36,10 @@ public class App {
                      Tensor output = s.runner().fetch("MyConst").run().get(0)) {
                     System.out.println(new String(output.bytesValue(), "UTF-8"));
                 }
+            }
+            catch(UnsupportedEncodingException e)
+            {
+
             }
         }
     }

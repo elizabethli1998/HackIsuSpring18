@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/HackIsuSpring18.iml" filepath="$PROJECT_DIR$/HackIsuSpring18.iml" />
-      <module fileurl="file://C:\Users\kyle\StudioProjects\HackIsuSpring18\HackIsuSpring18.iml" filepath="C:\Users\kyle\StudioProjects\HackIsuSpring18\HackIsuSpring18.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
