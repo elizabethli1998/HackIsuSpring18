@@ -5,12 +5,29 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".DataAnalysisActivity">
 
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="60dp"
+        android:text="Select an input:" />
+
+
     <Button
         android:id="@+id/back"
         android:layout_width="100dp"
         android:layout_height="40dp"
         android:layout_weight="1"
         android:text="back" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="400dp"
+        android:layout_marginLeft="130dp"
+        android:text="Do Fancy Stuff" />
 
     <Spinner
         android:id="@+id/dynamic_spinner"
@@ -19,5 +36,52 @@
         android:layout_below="@+id/back"
         android:layout_marginTop="45dp"
         android:layout_toEndOf="@+id/back" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="110dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="95dp"
+        android:text="Input Value:" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="170dp"
+        android:layout_marginTop="190dp"
+        android:text="Select an output:" />
+    <Spinner
+        android:id="@+id/dynamic_spinner2"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/back"
+        android:layout_marginTop="180dp"
+        android:layout_toEndOf="@+id/back" />
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="260dp"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="90dp"
+        android:text="Output Value:" />
+
 
 </RelativeLayout>
