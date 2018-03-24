@@ -18,6 +18,13 @@
         android:layout_height="wrap_content"
         android:text="Back" />
 
+    <Button
+        android:id="@+id/dataAnalysis"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="290dp"
+        android:text="Data Analysis" />
+
     <ListView
         android:id="@+id/listView"
         android:layout_width="fill_parent"
