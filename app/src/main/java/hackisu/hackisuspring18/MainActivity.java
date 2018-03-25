@@ -10,24 +10,49 @@ import android.widget.TextView;
 public class MainActivity extends Activity {
 
     private TextView title;
-    private Button readFile;
+    private Button check;
+    private Button check2;
+    private Button check3;
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         title = (TextView) findViewById(R.id.title);
-        readFile = (Button) findViewById(R.id.readFile);
-        readFile.setOnClickListener(new View.OnClickListener() {
+        check = (Button) findViewById(R.id.checkBox1);
+        check2 = (Button) findViewById(R.id.checkBox2);
+        check3 = (Button) findViewById(R.id.checkBox3);
+
+        check.setOnClickListener(new View.OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+
+                                            Intent intent=new Intent(MainActivity.this, ReadCSVActivity.class);
+                                            intent.putExtra("data", "pass");
+                                            startActivity(intent);
+                                        }
+                                    });
+        check2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent readFileIntent = new Intent(MainActivity.this, ReadCSVActivity.class);
-                readFileIntent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
-                readFileIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                readFileIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
-                overridePendingTransition(0, 0);
-                startActivity(readFileIntent);
+
+                Intent intent=new Intent(MainActivity.this, ReadCSVActivity.class);
+                intent.putExtra("data", "hotel");
+                startActivity(intent);
             }
         });
+
+        check3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                Intent intent=new Intent(MainActivity.this, ReadCSVActivity.class);
+                intent.putExtra("data", "lottery");
+                startActivity(intent);
+            }
+        });
+
+
     }
 }

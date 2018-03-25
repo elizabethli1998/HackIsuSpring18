@@ -9,13 +9,12 @@
         android:id="@id/title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/home"
-        android:layout_alignBottom="@+id/home"
-        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="70dp"
         android:fontFamily="serif-monospace"
-        android:text="HackISU"
+        android:text="Select the data you would like to see"
         android:textColor="@android:color/black"
-        android:textSize="18sp"
+        android:textSize="10sp"
         android:textStyle="bold" />
 
     <Button

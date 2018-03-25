@@ -7,15 +7,12 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Parcelable;
 import android.os.Bundle;
-import android.util.SparseBooleanArray;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import java.io.InputStream;
 import java.util.ArrayList;
 
@@ -26,6 +23,7 @@ public class ReadCSVActivity extends Activity
     private TextView title;
     private Button home;
     private Button dataAnalysis;
+    private InputStream inputStream;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -36,7 +34,23 @@ public class ReadCSVActivity extends Activity
         listView = (ListView) findViewById(R.id.listView);
         listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 
-        InputStream inputStream = getResources().openRawResource(R.raw.pass_12_13);
+        Intent intent = getIntent();
+        String message = intent.getStringExtra("data");
+
+
+        if(message.equals("pass"))
+        {
+            inputStream = getResources().openRawResource(R.raw.pass_12_13);
+        }
+        else if(message.equals("lottery"))
+        {
+            inputStream = getResources().openRawResource(R.raw.lottery_ny_lotto_winning_numbers__beginning_2001);
+        }
+        else if(message.equals("hotel"))
+        {
+            inputStream = getResources().openRawResource(R.raw.hotel);
+        }
+
         CSVFile csvFile = new CSVFile(inputStream);
         ArrayList<String> scoreList = csvFile.read();
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, R.layout.checkbox_layout, R.id.checkbox1,scoreList);

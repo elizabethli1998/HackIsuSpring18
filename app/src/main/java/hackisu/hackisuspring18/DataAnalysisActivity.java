@@ -21,6 +21,7 @@ import java.util.ArrayList;
 public class DataAnalysisActivity extends Activity
 {
     private Button back;
+    private Button display;
     private TextView textView1;
     private TextView textView2;
 
@@ -75,7 +76,21 @@ public class DataAnalysisActivity extends Activity
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
-                Intent readFileIntent = new Intent(DataAnalysisActivity.this, ReadCSVActivity.class);
+                Intent readFileIntent = new Intent(DataAnalysisActivity.this, MainActivity.class);
+                readFileIntent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+                readFileIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                readFileIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                overridePendingTransition(0, 0);
+                startActivity(readFileIntent);
+            }
+
+        });
+
+        display = (Button) findViewById(R.id.display);
+        display.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v){
+                Intent readFileIntent = new Intent(DataAnalysisActivity.this, DisplayActivity.class);
                 readFileIntent.setFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
                 readFileIntent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 readFileIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
