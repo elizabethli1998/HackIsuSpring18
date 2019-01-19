@@ -24,19 +24,20 @@ public class MainActivity extends Activity {
         check2 = (Button) findViewById(R.id.checkBox2);
         check3 = (Button) findViewById(R.id.checkBox3);
 
-        check.setOnClickListener(new View.OnClickListener() {
-                                        @Override
-                                        public void onClick(View v) {
 
-                                            Intent intent=new Intent(MainActivity.this, ReadCSVActivity.class);
-                                            intent.putExtra("data", "pass");
-                                            startActivity(intent);
-                                        }
-                                    });
+        check.setOnClickListener(new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            JobsService js = new JobsService();
+            MySingleton.getInstance(getApplicationContext()).addToRequestQueue(js.test(getApplicationContext()));
+            Intent intent=new Intent(MainActivity.this, ReadCSVActivity.class);
+            intent.putExtra("data", "pass");
+            startActivity(intent);
+        }
+        });
         check2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 Intent intent=new Intent(MainActivity.this, ReadCSVActivity.class);
                 intent.putExtra("data", "hotel");
                 startActivity(intent);

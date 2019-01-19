@@ -60,7 +60,6 @@
         android:inputType="textMultiLine"
         android:text="Welcome! Please choose a dataset to get started. Have fun with your neural networks! "
         android:textColor="@android:color/black"
-        android:background="@drawable/description"
         android:textStyle="bold" />
 
     <TextView
@@ -75,7 +74,6 @@
         android:inputType="textMultiLine"
         android:text="Historical data for numbers of COM S AP A Exams taken for every state for 2012 and 2013! "
         android:textColor="@android:color/black"
-        android:background="@drawable/mytext"
         android:textStyle="bold" />
 
     <TextView
@@ -85,7 +83,7 @@
         android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/checkBox2"
         android:layout_marginEnd="13dp"
-        android:background="@drawable/mytext"
+
         android:ems="10"
         android:fontFamily="serif-monospace"
         android:inputType="textMultiLine"
@@ -99,7 +97,6 @@
         android:layout_height="wrap_content"
         android:layout_alignStart="@+id/description3"
         android:layout_alignTop="@+id/checkBox3"
-        android:background="@drawable/mytext"
         android:ems="10"
         android:fontFamily="serif-monospace"
         android:inputType="textMultiLine"
